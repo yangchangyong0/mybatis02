@@ -1,0 +1,2 @@
+# mybatis02
+这个是mybatis学习教程10章以后mybatis的项目代码
