@@ -59,5 +59,8 @@ public class MybatisTest9_10 {
 
         sqlSession2.close();
     }
+    public void  test111(){
+        System.out.println("uu");
+    }
 
 }
