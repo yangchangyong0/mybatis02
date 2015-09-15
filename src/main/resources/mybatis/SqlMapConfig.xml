@@ -14,7 +14,7 @@
         <!-- 设置按需加载 -->
         <setting name="aggressiveLazyLoading" value="false" />
         <!-- 二级缓存总开关 -->
-        <setting name="cacheEnabled" value="true"></setting>
+        <setting name="cacheEnabled" value="true" ></setting>
     </settings>
     
     <typeAliases>
