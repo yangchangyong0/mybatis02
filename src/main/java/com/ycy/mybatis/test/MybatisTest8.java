@@ -1,7 +1,6 @@
 package com.ycy.mybatis.test;
 
 import com.ycy.mybatis.dao.OrdersCustomMapper;
-import com.ycy.mybatis.module.Orderdetail;
 import com.ycy.mybatis.module.Orders;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -21,7 +20,7 @@ public class MybatisTest8 {
     private SqlSessionFactory sqlSessionFactory = null;
     @Before
     public void  before() throws IOException {
-        String resource="SqlMapConfig.xml";
+        String resource= "mybatis/SqlMapConfig.xml";
         InputStream in = Resources.getResourceAsStream(resource);
         sqlSessionFactory= new SqlSessionFactoryBuilder().build(in);
     }

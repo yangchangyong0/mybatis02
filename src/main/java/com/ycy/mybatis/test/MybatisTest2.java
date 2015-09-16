@@ -18,14 +18,14 @@ public class MybatisTest2 {
     private SqlSessionFactory sqlSessionFactory = null;
     @Before
     public void  before() throws IOException {
-    String resource="SqlMapConfig.xml";
+    String resource= "mybatis/SqlMapConfig.xml";
         InputStream in =Resources.getResourceAsStream(resource);
         sqlSessionFactory= new  SqlSessionFactoryBuilder().build(in);
     }
     @Test
     public void  testGet() throws Exception {
-        UserMappermpl userService=new UserMappermpl(sqlSessionFactory);
-         User user= userService.getUserById(1);
-        System.out.println(user.getUsername());
+       // UserMappermpl userService=new UserMappermpl(sqlSessionFactory);
+        /// User user= userService.getUserById(1);
+       /// System.out.println(user.getUsername());
     }
 }

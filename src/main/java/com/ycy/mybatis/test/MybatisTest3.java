@@ -20,7 +20,7 @@ public class MybatisTest3 {
     private SqlSessionFactory sqlSessionFactory = null;
     @Before
     public void  before() throws IOException {
-        String resource="SqlMapConfig.xml";
+        String resource= "mybatis/SqlMapConfig.xml";
         InputStream in = Resources.getResourceAsStream(resource);
         sqlSessionFactory= new SqlSessionFactoryBuilder().build(in);
     }

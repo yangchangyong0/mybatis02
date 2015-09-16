@@ -25,11 +25,6 @@
 		<property name="maxActive" value="10" />
 		<property name="maxIdle" value="5" />
 	</bean>
-
-
-
-
-
 	<!-- SqlsessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 数据源 -->
@@ -38,31 +33,29 @@
 		<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
 	</bean>
 	
-	<!-- 配置dao -->
-	<bean id="userDao" class="cn.itcast.mybatis.dao.UserDaoImpl">
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-	</bean>
-	
-	<!-- 配置mapper
-	MapperFactoryBean：用于生成mapper代理对象
-	 -->
-	<!-- <bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-		<property name="mapperInterface" value="cn.itcast.mybatis.mapper.UserMapper"/>
-		<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-	</bean> -->
-	<!-- 
-	MapperScannerConfigurer：mapper的扫描器，将包下边的mapper接口自动创建代理对象，
-	自动创建到spring容器中，bean的id是mapper的类名（首字母小写）
+	<!-- 1、配置原始dao、impl(多而且繁琐) -->
+	<!--
+			<bean id="userDao" class="com.ycy.mybatis.dao.impl.UserMappermpl">
+				<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+			</bean>-->
+	<!-- 配置mapper.java代理 -->
+	<!--2、MapperFactoryBean(多而且繁琐)：用于生成mapper代理对象
+			<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+				<property name="mapperInterface" value="cn.itcast.mybatis.mapper.UserMapper"/>
+				<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+			</bean> -->
+	<!-- 3、MapperScannerConfigurer(扫描简单)：mapper的扫描器，将包下边的mapper接口自动创建代理对象，
+			自动创建到spring容器中，bean的id是mapper的类名（首字母小写）
 	 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 配置扫描包的路径
 		如果要扫描多个包，中间使用半角逗号分隔
 		 -->
-		<property name="basePackage" value="cn.itcast.mybatis.mapper"/>
+		<property name="basePackage" value="com.ycy.mybatis.dao"/>
 		<!-- 使用sqlSessionFactoryBeanName -->
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-		
-		
+
+
 	</bean>
 	
 </beans>

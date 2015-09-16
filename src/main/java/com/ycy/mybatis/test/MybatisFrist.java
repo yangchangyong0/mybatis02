@@ -23,7 +23,7 @@ public class MybatisFrist {
     @Before
     public void before() throws IOException {
         //创建会话工厂
-        String resource = "SqlMapConfig.xml";
+        String resource = "mybatis/SqlMapConfig.xml";
         InputStream in = null;
         in = Resources.getResourceAsStream(resource);
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(in);

@@ -1,10 +1,8 @@
 package com.ycy.mybatis.test;
 
 import com.ycy.mybatis.dao.OrdersCustomMapper;
-import com.ycy.mybatis.dao.UserMapper;
 import com.ycy.mybatis.module.Orders;
 import com.ycy.mybatis.module.OrdersCustom;
-import com.ycy.mybatis.module.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -14,7 +12,6 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -24,7 +21,7 @@ public class MybatisTest6 {
     private SqlSessionFactory sqlSessionFactory = null;
     @Before
     public void  before() throws IOException {
-        String resource="SqlMapConfig.xml";
+        String resource= "mybatis/SqlMapConfig.xml";
         InputStream in = Resources.getResourceAsStream(resource);
         sqlSessionFactory= new SqlSessionFactoryBuilder().build(in);
     }
