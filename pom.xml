@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.ycy.mybatis01</groupId>
+  <groupId>com.ycy.mybatis02</groupId>
   <artifactId>mybatis01</artifactId>
   <packaging>war</packaging>
-  <version>1.0-mybatis01</version>
+  <version>1.0-mybatis02</version>
   <name>mybatis01 Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <build>
@@ -16,7 +16,7 @@
     <dependency>
       <groupId>Mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.30</version>
+      <version>5.1.31</version>
     </dependency>
     <!--数据库连接池-->
     <dependency>
