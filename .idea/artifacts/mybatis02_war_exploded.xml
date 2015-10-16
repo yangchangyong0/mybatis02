@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="mybatis01:war exploded">
+  <artifact type="exploded-war" name="mybatis02:war exploded">
     <output-path>$PROJECT_DIR$/target/mybatis01</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
